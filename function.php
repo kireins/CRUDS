@@ -39,4 +39,23 @@ function hapus($id){
     return mysqli_affected_rows($db);
 }  
 
+function hapus ($id){
+    global $db;
+    mysqli_query($db, "DELETE FROM tb_siswa WHERE id_siswa = $id");
+    return mysqli_affected_rows ($db);
+}
+
+functionuubah($data){
+    global $db;
+    //ambil data dari tiap elemen dalam form
+    $id = $data["id"];
+    $nama = htmlspecialchars($data["nama_siswa"]);
+    $nim = htmlspecialchars($data["nim_siswa"]);
+    $email = htmlspecialchars($data["email_siswa"]);
+    $jurusan = htmlspecialchars($data["jurusan_siswa"]);
+    $gambar = htmlspecialchars($data["gambar_siswa"]);
+
+}
+
+
 ?>

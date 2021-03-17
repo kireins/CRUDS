@@ -35,6 +35,7 @@ $siswa = query("SELECT * FROM tb_siswa");
         <td><?= $i; ?></td>
         <td>
         <a href="">ubah</a> | 
+        <a href="ubah.php?id="<?php echo $row["id_siswa"];?>>ubah</a>
         <a href="hapus.php?id="<?php echo $row["id_siswa"];?>>hapus</a>
         </td>
         <td><img src="img/<?php echo $row["gambar_siswa"];?>" width="50"></td>
